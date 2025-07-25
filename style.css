@@ -1,0 +1,132 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #1c1c28;
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 15px;
+}
+
+.glow {
+  font-size: 1.6rem;
+  text-shadow: 0 0 15px #fff, 0 0 25px #ba68c8;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #e1bee7;
+  padding: 0 10px;
+}
+
+.vertical-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.tablink {
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 12px;
+  margin: 5px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  border-radius: 5px;
+}
+
+.tablink:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateX(5px);
+}
+
+.tablink.active {
+  background: rgba(255,255,255,0.2);
+}
+
+
+.tab-container {
+  flex: 1;
+  padding: 30px;
+  animation: fadeEffect 0.8s;
+}
+
+.tabcontent {
+  display: none;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-item {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: scale(1.03);
+}
+
+.project-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+a {
+  color: #ba68c8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul li {
+  margin-bottom: 10px;
+}

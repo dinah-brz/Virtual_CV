@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinah Zame | Virtual CV</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="particles"></canvas>
+
+<div class="container">
+  <aside class="sidebar">
+    <div class="profile-section">
+      <img src="profile-placeholder.png" alt="Dinah Zame" class="profile-img">
+      <h1 class="glow">Dinah Zame</h1>
+      <p class="subtitle">Aspiring Software Developer<br>| Full-Stack Enthusiast</p>
+    </div>
+    <nav class="vertical-tabs">
+      <button class="tablink active" onclick="openTab(event, 'summary')">Summary</button>
+      <button class="tablink" onclick="openTab(event, 'competencies')">Core Competencies</button>
+      <button class="tablink" onclick="openTab(event, 'education')">Education</button>
+      <button class="tablink" onclick="openTab(event, 'skills')">Technical Skills</button>
+      <button class="tablink" onclick="openTab(event, 'languages')">Languages</button>
+      <button class="tablink" onclick="openTab(event, 'projects')">Project</button>
+      <button class="tablink" onclick="openTab(event, 'contact')">Contact</button>
+    </nav>
+  </aside>
+
+  <main class="tab-container">
+    <section id="summary" class="tabcontent" style="display:block;">
+      <h2>Professional Summary</h2>
+      <p>
+        Final-year Bachelor of Information Technology student with strong practical skills in Java, Python, C#, C++, and database systems.
+        Skilled in developing software applications and solving complex problems through coding and system design.
+        A fast learner with excellent problem-solving abilities and attention to detail.
+        Currently seeking an opportunity to contribute to innovative software solutions and grow as a developer in a dynamic work environment.
+      </p>
+    </section>
+
+    <section id="competencies" class="tabcontent">
+      <h2>Core Competencies</h2>
+      <ul>
+        <li>Programming Proficiency – Skilled in Java, Python, C#, C++, and SQL for software development and database management.</li>
+        <li>Problem Solving – Strong analytical and logical thinking skills applied in academic coding and systems projects.</li>
+        <li>Database Management – Capable of designing and querying relational databases using MySQL and SQL Server.</li>
+        <li>Version Control – Familiar with Git for collaborative coding and project tracking.</li>
+        <li>Adaptability & Willingness to Learn – Quick to grasp new technologies and frameworks.</li>
+        <li>Time Management – Able to meet tight deadlines and balance multiple academic tasks efficiently.</li>
+        <li>Communication Skills – Confident in explaining technical ideas clearly in both written and verbal formats.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="tabcontent">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Information Technology</strong><br>
+         <strong>North West University</strong> (Feb 2022 - Nov 2025)</p>
+      <p><strong>Key Modules:</strong> Software Development, Database Systems, Systems Analysis and Design, Data Structures, Networking</p>
+      <p><strong>Practical Exposure:</strong> Full-stack development, database design, and logic-based systems. Currently completing final-year projects with a focus on real-world application of IT concepts.</p>
+      <p><strong>Expected Graduation:</strong> May 2026</p>
+    </section>
+
+    <section id="skills" class="tabcontent">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Java, Python, C#, C++, SQL</li>
+        <li><strong>Databases:</strong> MySQL, SQL Server</li>
+        <li><strong>Tools & IDEs:</strong> Visual Studio, MySQL Workbench, Code::Blocks, IDLE</li>
+        <li><strong>Productivity Tools:</strong> Microsoft Word, Excel, PowerPoint</li>
+        <li><strong>Version Control:</strong> Git (basic)</li>
+      </ul>
+    </section>
+
+    <section id="languages" class="tabcontent">
+      <h2>Languages</h2>
+      <p>English – Fluent</p>
+      <p>Setswana – Fluent</p>
+      <p>Afrikaans – Intermediate</p>
+    </section>
+
+    <section id="projects" class="tabcontent">
+      <h2>Project: Eco Friendly System (EES)</h2>
+      <div class="project-item">
+        <img src="Screenshot (143).png" alt="Eco Events Login Page">
+        <h3>Eco Friendly System (EES)</h3>
+        <p>An eco-conscious event management system. Features a user-friendly login interface and tools for promoting sustainable events.</p>
+        <a href="https://github.com/dinah-brz/Eco_Friendly_System_ees.git" target="_blank">View Project on GitHub</a>
+      </div>
+    </section>
+
+    <section id="contact" class="tabcontent">
+      <h2>Contact & References</h2>
+      <p><strong>Email:</strong> <a href="mailto:brazdinah@gmail.com">brazdinah@gmail.com</a></p>
+      <p><strong>Phone:</strong> 073 984 1609</p>
+      <p><strong>Address:</strong> 4702 Shorobe St., Rustenburg</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dinah-zame-707493259" target="_blank">View Profile</a></p>
+      <p><em>References available upon request</em></p>
+    </section>
+  </main>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
